@@ -34,5 +34,5 @@ window.getModule = function(filter=(m => m)) {
 	return result;
 };
 
-setInterval(()=> console.log(window.getModule(m=> m?.getName?.() === 'UserStore')), 0);
+setInterval(()=> console.log(window.getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser().premiumType), 0);
 //window.getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser().premiumType = 2;
