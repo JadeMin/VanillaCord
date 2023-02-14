@@ -1,12 +1,12 @@
-let logging = false;
-function cLog(){
-	if(logging) console.log(...arguments);
-}
+const cLog = () => {
+	if(window.logging) console.log(...arguments);
+};
 if(!window.hasOwnProperty("WebpackExports")) {
 	window.WebpackExports = window.webpackChunkdiscord_app.push([["MODULE_MANAGER"], {}, e => e]);
 	cLog("WebpackChunk pushed");
 } else cLog("already WebpackChunk pushed");
-window.getModule = function(filter=(m => m)) {
+
+export const getModule = (filter) => {
 	const result = [];
 	const modules = WebpackExports.c;
 	const fixedFilter = (module) => {
@@ -34,5 +34,6 @@ window.getModule = function(filter=(m => m)) {
 	return result;
 };
 
-setInterval(()=> console.log(window.getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser().premiumType), 0);
+
+setInterval(()=> console.log(getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser()), 0);
 //window.getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser().premiumType = 2;
