@@ -6,7 +6,7 @@ if(!window.hasOwnProperty("WebpackExports")) {
 	window.WebpackExports = window.webpackChunkdiscord_app.push([["MODULE_MANAGER"], {}, e => e]);
 	cLog("WebpackChunk pushed");
 } else cLog("already WebpackChunk pushed");
-window.getModule(filter=(m => m)) {
+window.getModule = function(filter=(m => m)) {
 	const result = [];
 	const modules = WebpackExports.c;
 	const fixedFilter = (module) => {
