@@ -35,5 +35,5 @@ export const getModule = (filter) => {
 };
 
 
-setInterval(()=> console.log(getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser()), 0);
+setInterval(()=> console.log(getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser()), 100);
 //window.getModule(m=> m?.getName?.() === 'UserStore')[0].getCurrentUser().premiumType = 2;
